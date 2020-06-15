@@ -80,17 +80,17 @@ public class PedidosDaoTest {
     public void testInsert() {
         System.out.println("Test Insert");
         PedidosDao instance = new PedidosDao();
-        Date dato_1 = new Date(1996-07-19);
-        Date dato_2 = new Date(1996-07-17);
-        Date dato_3 = new Date(1996-07-18);
+        Date dia1 = new Date(1996-07-19);
+        Date dia2 = new Date(1996-07-17);
+        Date dia3 = new Date(1996-07-18);
         BigDecimal bd = new BigDecimal(125.351);
-        Pedido pedido = new Pedido(11076, 5, 9, dato_1, dato_2, dato_3,3,bd, "try", "try", "try", "try", "try", "try");
+        Pedido pedido = new Pedido(11076, 5, 9, dia1, dia2, dia3,3,bd, "try", "try", "try", "try", "try", "try");
         Integer expResult = null;
         Integer result = instance.insert(pedido);
         assertNotEquals(expResult,result);
         instance.delete(result);
         
-        Pedido pedido2 = new Pedido(13149, 5, 9, dato_1, dato_2, dato_3,6,bd, "try", "try", "try", "try", "try", "try");
+        Pedido pedido2 = new Pedido(13149, 5, 9, dia1, dia2, dia3,6,bd, "try", "try", "try", "try", "try", "try");
         Integer expResult2 = null;
         Integer result2 = instance.insert(pedido2);
         assertEquals(expResult2,result2);
